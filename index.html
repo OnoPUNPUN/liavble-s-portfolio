@@ -32,6 +32,58 @@
         .animate-fade-in {
             animation: fadeIn 1s ease-out forwards;
         }
+        /* Gentle ping for avatar ring */
+        @keyframes pingSlow {
+            0% { transform: scale(1); opacity: .6; }
+            70% { transform: scale(1.25); opacity: 0; }
+            100% { transform: scale(1.25); opacity: 0; }
+        }
+        .animate-ping-slow {
+            animation: pingSlow 2.5s cubic-bezier(0, 0, .2, 1) infinite;
+        }
+        /* Soft glow utility */
+        .soft-glow {
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.25), 0 2px 8px rgba(56, 189, 248, 0.12);
+        }
+        /* Heading gradient text */
+        .heading-gradient {
+            background: linear-gradient(90deg, #c084fc 0%, #60a5fa 40%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        /* Underline shimmer bar */
+        .underline-shimmer { position: relative; }
+        .underline-shimmer:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 120px;
+            height: 6px;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, rgba(96,165,250,.5), rgba(236,72,153,.6));
+            filter: blur(.5px);
+        }
+        /* Glass card utility */
+        .glass-card {
+            background: rgba(17, 24, 39, 0.45);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(236, 72, 153, 0.25);
+        }
+        /* Corner halo for cards */
+        .corner-halo:before {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 160px;
+            height: 160px;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 30% 30%, rgba(244,114,182,.35), transparent 60%);
+            pointer-events: none;
+        }
         /* Custom scrollbar for a more aesthetic look */
         ::-webkit-scrollbar {
             width: 8px;

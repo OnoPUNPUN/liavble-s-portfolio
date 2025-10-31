@@ -52,8 +52,8 @@ const App: React.FC = () => {
         className="fixed inset-0 bg-cover bg-center -z-10"
         style={{ backgroundImage: 'url(/assests/hero-bg.jpg)' }}
       >
-        <div className="absolute inset-0 bg-pink-200/25 backdrop-blur-[2px] mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-pink-200/10 via-transparent to-pink-300/20"></div>
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-pink-200/20 via-transparent to-pink-300/30"></div>
       </div>
       <ParticleBackground />
 
@@ -63,10 +63,10 @@ const App: React.FC = () => {
 
           <section className="mt-12">
             <h2 
-              className="animate-fade-in text-3xl font-bold text-center mb-6 text-cyan-300"
-              style={{ textShadow: '0 0 8px rgba(56, 189, 248, 0.6)', animationDelay: '200ms' }}
+              className="animate-fade-in text-3xl font-extrabold text-center mb-6 heading-gradient underline-shimmer"
+              style={{ animationDelay: '200ms' }}
             >
-              Current Staff Role
+              Current Role
             </h2>
             <div className="space-y-4">
               {currentRoles.map((role, index) => (
@@ -77,10 +77,10 @@ const App: React.FC = () => {
 
           <section className="mt-12">
             <h2 
-              className="animate-fade-in text-3xl font-bold text-center mb-6 text-pink-300"
-              style={{ textShadow: '0 0 8px rgba(244, 114, 182, 0.6)', animationDelay: '500ms' }}
+              className="animate-fade-in text-3xl font-extrabold text-center mb-6 heading-gradient underline-shimmer"
+              style={{ animationDelay: '500ms' }}
             >
-              Previous Staff Roles
+              Previous Experience
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {previousRoles.map((role, index) => (
@@ -89,8 +89,10 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <footer className="text-center p-8 mt-8 text-white/50 animate-fade-in" style={{ animationDelay: '1s' }}>
-            <p>&copy; {new Date().getFullYear()} Liavble. All rights reserved.</p>
+          <footer className="text-center p-8 mt-10 animate-fade-in" style={{ animationDelay: '1s' }}>
+            <span className="inline-block px-5 py-2 rounded-full bg-white/15 border border-white/20 text-white/80">
+              Building communities and maintaining positive spaces in the Roblox universe ✨
+            </span>
           </footer>
         </div>
       </main>
